@@ -25,7 +25,7 @@ public class MemberDAO {
 		}
 	}
 	public ArrayList<Member> selectAll() { 
-		// ÀÔ·ÂÇÑ ¸Ş¸ğ¸® »ó¿¡ Á¸ÀçÇÏ´Â ¸ğµç ¸â¹ö Á¤º¸¸¦ °¡Á®¿Í Ãâ·Â			
+		// ì…ë ¥í•œ ë©”ëª¨ë¦¬ ìƒì— ì¡´ì¬í•˜ëŠ” ëª¨ë“  ë©¤ë²„ ì •ë³´ë¥¼ ê°€ì ¸ì™€ ì¶œë ¥			
 		return memberList;	
 	}
 	
@@ -38,7 +38,7 @@ public class MemberDAO {
 	}
 	
 	public int searchByID(Member member) { 
-		int ret = -1; // ret°¡ 0 ÀÌ»óÀÌ¸é °Ë»ö ¼º°ø, -1 ÀÌ¸é °Ë»ö ½ÇÆĞ
+		int ret = -1; // retê°€ 0 ì´ìƒì´ë©´ ê²€ìƒ‰ ì„±ê³µ, -1 ì´ë©´ ê²€ìƒ‰ ì‹¤íŒ¨
 		int index = 0;
 		for(Member m : memberList) {
 			if(m.getUid().equals(member.getUid())) {
@@ -54,7 +54,7 @@ public class MemberDAO {
 		int ret = -1;
 		try {
 			int index = searchByID(member);
-			if(index < 0) { // -1ÀÌ¸é °Ë»ö ½ÇÆĞ, µî·Ï °¡´ÉÇÔ
+			if(index < 0) { // -1ì´ë©´ ê²€ìƒ‰ ì‹¤íŒ¨, ë“±ë¡ ê°€ëŠ¥í•¨
 				fw = new MemberFileWriter(file);
 				memberList.add(member);
 				fw.saveMember(memberList);
@@ -67,13 +67,13 @@ public class MemberDAO {
 	}
 	
 	public int update(Member member) {
-		int ret = -1; // 0 ÀÌ»óÀÌ¸é ÇØ´ç ¾ÆÀÌµğ°¡ Á¸ÀçÇÏ¹Ç·Î ¼öÁ¤, -1ÀÌÇÏÀÌ¸é ¼öÁ¤ ½ÇÆĞ		
+		int ret = -1; // 0 ì´ìƒì´ë©´ í•´ë‹¹ ì•„ì´ë””ê°€ ì¡´ì¬í•˜ë¯€ë¡œ ìˆ˜ì •, -1ì´í•˜ì´ë©´ ìˆ˜ì • ì‹¤íŒ¨		
 		
 		
 		return ret;
 	}	
 	public int delete(Member member) {		
-		int ret = -1; // 0 ÀÌ»óÀÌ¸é ÇØ´ç ¾ÆÀÌµğ°¡ Á¸ÀçÇÏ¹Ç·Î »èÁ¦, -1ÀÌÇÏÀÌ¸é »èÁ¦ ½ÇÆĞ
+		int ret = -1; // 0 ì´ìƒì´ë©´ í•´ë‹¹ ì•„ì´ë””ê°€ ì¡´ì¬í•˜ë¯€ë¡œ ì‚­ì œ, -1ì´í•˜ì´ë©´ ì‚­ì œ ì‹¤íŒ¨
 		
 		return ret;
 	}

@@ -10,10 +10,11 @@ import model.MemberDAO;
 
 public class MemberServiceImpl implements MemberService {
 	
-	private ArrayList<Member> memberList; // È¸¿ø Á¤º¸ Å×ÀÌºí¿¡ ¸ÅÇÎµÇ´Â °´Ã¼
-	private Member memberDTO; // È¸¿ø Á¤º¸ ·¹ÄÚµå¿¡ ¸ÅÇÎµÇ´Â °´Ã¼
-	private MemberDAO memberDAO; // È¸¿ø Á¤º¸ Ã³¸®¸¦ À§ÇØ ÆÄÀÏ ¶Ç´Â µ¥ÀÌÅÍº£ÀÌ½º¸¦ Á¢±ÙÇÏ´Â °´Ã¼
+	private ArrayList<Member> memberList; // íšŒì› ì •ë³´ í…Œì´ë¸”ì— ë§¤í•‘ë˜ëŠ” ê°ì²´
+	private Member memberDTO; // íšŒì› ì •ë³´ ë ˆì½”ë“œì— ë§¤í•‘ë˜ëŠ” ê°ì²´
+	private MemberDAO memberDAO; // íšŒì› ì •ë³´ ì²˜ë¦¬ë¥¼ ìœ„í•´ íŒŒì¼ ë˜ëŠ” ë°ì´í„°ë² ì´ìŠ¤ë¥¼ ì ‘ê·¼í•˜ëŠ” ê°ì²´
 	
+	// this : í˜„ì¬ ê°ì²´ ì§€ì •, This(ë§¤ê°œë³€ìˆ˜) : í˜„ì¬ ê°ì²´ì˜ ìƒì„±ì 
 	public MemberServiceImpl() {
 		this(new File("member.txt"));		
 	}

@@ -6,12 +6,12 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Member { // DBÀÇ ·¹ÄÚµå¿Í ¸ÅÇÎµÇ´Â °´Ã¼
-	private StringProperty uid; // DBÀÇ ÇÊµå¿Í ¸ÅÇÎ
+public class Member { // DBì˜ ë ˆì½”ë“œì™€ ë§¤í•‘ë˜ëŠ” ê°ì²´
+	private StringProperty uid; // DBì˜ í•„ë“œì™€ ë§¤í•‘
 	private StringProperty upw;
 	private StringProperty uname;
 	private final StringProperty mobilePhone;
-	/*
+	/* 
     private final IntegerProperty zipcode;
     private ObjectProperty<LocalDate> birthday;
 	*/

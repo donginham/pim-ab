@@ -18,7 +18,8 @@ public class MemberFileReader {
 		while(sc.hasNext()) {
 			Member m = new Member();
 			String strArr[] = sc.nextLine().split("\t"); 
-			// ÆÄÀÏ¿¡ ÀúÀåµÈ Á¤º¸¸¦ ÁÙ´ÜÀ§·Î ÀÐ°í, °¢ ÁÙÀ» ÅÇ ±âÈ£·Î ½ºÄ³´×ÇÏ¿© ÅäÅ«µéÀ» ¹è¿­ °´Ã¼¿¡ ÀúÀå
+			// íŒŒì¼ì— ì €ìž¥ëœ ì •ë³´ë¥¼ ì¤„ë‹¨ìœ„ë¡œ ì½ê³ , ê° ì¤„ì„ íƒ­ ê¸°í˜¸ë¡œ ìŠ¤ìºë‹í•˜ì—¬ í† í°ë“¤ì„ ë°°ì—´ ê°ì²´ì— ì €ìž¥
+			System.out.println(">>>>>>>>" + strArr[0] + strArr[1]+ strArr[2]);
 			m.setUid(strArr[0]);
 			m.setUpw(strArr[1]);
 			m.setUname(strArr[2]);
