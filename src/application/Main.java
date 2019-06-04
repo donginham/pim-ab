@@ -12,7 +12,7 @@ import view.RootViewController;
 import view.MemberViewController;
 
 public class Main extends Application {
-	
+	int i;
     private Stage rootStage;
     private BorderPane rootBorderPane;
     private AnchorPane memberAnchorPane;
