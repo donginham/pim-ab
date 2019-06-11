@@ -26,7 +26,7 @@ public class MemberViewController implements Initializable {
 	@FXML	private Button btnUpdate;
 	@FXML	private Button btnDelete;
 	
-	@FXML	private Button btnExecute;
+	@FXML	private Button btnReol;
 	@FXML	private TextArea taExecute;
 	@FXML	private TextField tfExecute;
 	
@@ -66,10 +66,15 @@ public class MemberViewController implements Initializable {
 				(observable, oldValue, newValue) -> showMemberInfo(newValue));
 
 		btnCreate.setOnMouseClicked(event -> handleCreate());		
-		btnDelete.setOnMouseClicked(e -> handleDelete());		
-		btnExecute.setOnMouseClicked(event -> handleExecute());	
+		//btnDelete.setOnMouseClicked(e -> handleDelete());		
+		//btnReol.setOnMouseClicked(event -> handleExecute());	
 		
 		loadMemberTableView();
+	}
+	@FXML
+	private void handleReol() {
+		taExecute.setText("Bless REOL");
+		System.out.println("Bless REOL");
 	}
 	String str = ""; // 인스턴스 변수 - 객체 변수, 객체가 존재하는 동안 메모리에 존재
 	@FXML 
@@ -90,13 +95,13 @@ public class MemberViewController implements Initializable {
 			tfID.setText(member.getUid());
 			tfPW.setText(member.getUpw());
 			tfName.setText(member.getUname());
-//			tfMobilePhone.setText(member.getMobilePhone());
+			//tfMobilePhone.setText(member.getMobilePhone());
 		}
 		 else {
 			 tfID.setText("");
 			 tfPW.setText("");
 		     tfName.setText("");
-//		     tfMobilePhone.setText("010");
+		     //tfMobilePhone.setText("010");
 		 }
 	}
 	
@@ -128,7 +133,7 @@ public class MemberViewController implements Initializable {
 			tableViewMember.getItems().set(selectedIndex, newMember);
 			memberService.update(newMember);			
 		} else {
-			showAlert("������ �� �� �����ϴ�.");          
+			showAlert("업데이트를 실패하였습니다.");          
         }
 	}
 	
@@ -138,7 +143,7 @@ public class MemberViewController implements Initializable {
 		if (selectedIndex >= 0) {
 			memberService.delete(tableViewMember.getItems().remove(selectedIndex));			
 		} else {
-			showAlert("������ �� �� �����ϴ�.");
+			showAlert("삭제를 실패하였습니다.");
         }
 	}
 	

@@ -19,7 +19,6 @@ public class MemberFileReader {
 			Member m = new Member();
 			String strArr[] = sc.nextLine().split("\t"); 
 			// 파일에 저장된 정보를 줄단위로 읽고, 각 줄을 탭 기호로 스캐닝하여 토큰들을 배열 객체에 저장
-			System.out.println(">>>>>>>>" + strArr[0] + strArr[1]+ strArr[2]);
 			m.setUid(strArr[0]);
 			m.setUpw(strArr[1]);
 			m.setUname(strArr[2]);
